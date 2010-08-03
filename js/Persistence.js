@@ -25,7 +25,6 @@ Persistence = {
     localStorage.removeItem('logged');
     localStorage.removeItem('username');
     localStorage.removeItem('remember');
-    localStorage.removeItem('currentTheme');
   }
 };
 Persistence.init();
