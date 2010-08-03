@@ -20,5 +20,5 @@
       "js": ["js/jquery.js"],
       "css": ["css/common.css"]
     }],
-  "update_url": "http://github.com/asfman/rjce/blob/master/update.xml"
+  "update_url": "http://github.com/asfman/rjce/raw/master/update.xml"
 }
