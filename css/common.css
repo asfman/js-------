@@ -1,6 +1,4 @@
-*{font-family: Tahoma, "宋体", Helvetica, Arial, sans-serif; font-size: 12px;}
-html{overflow-x: hidden; overflow-y: auto;_overflow-y: scroll;}
-body{line-height:1.8;background-color:#fff;}
+*{font-family: "Microsoft Yahei", "微软雅黑", "雅黑", Tahoma, "宋体", Helvetica, Arial, sans-serif; font-size: 12px;}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, code, em, q, small, strong, li, ol, ul, dl, dd, dt, fieldset, form, label, table, tbody, tr, th, td{margin: 0; padding: 0;}
 ul, ol, li{list-style: none;}
 h1,h2{font-size:14px;}

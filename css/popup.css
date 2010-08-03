@@ -1,0 +1,112 @@
+html, body{overflow: hidden;}
+body{width:480px; color:#182A58; line-height: 1.5; padding: 4px;}
+a{text-decoration:none; color:#049;} 
+a:hover {text-decoration: underline;}
+#scrollArea{
+	height: 450px;
+	overflow-y: auto;
+	word-wrap: break-word;
+	background: url(images/tab.gif) no-repeat;
+}
+.scrollArea{
+	border: 1px solid #B7B7B7;
+	padding: 3px;
+	-webkit-border-radius: 5px;
+}
+#say{
+	width: 466px; 
+	padding: 6px; 
+	margin: 0; 
+	height: 54px;
+	overflow-y: auto;
+	-webkit-border-radius: 5px;
+	background-color: #f0f5fb;
+  	border: 1px solid #c1cddc;	
+}
+#say:focus{
+	border-color: skyblue;
+}
+#controlPostArea{
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	color: #000000;
+}
+#controlPostArea img{margin-top: 5px;}
+#controlPostArea img.fl{margin-left: 5px;}
+#controlPostArea img.fr{margin-right: 5px;}
+.controlPostAreaPd{
+	background-color: #e5effe;
+	border: 1px solid #b4cff2;
+	-webkit-border-radius: 5px;
+	padding: 3px;
+}
+.controlPostAreaPd:hover {
+	background-color: #f0f5fb;
+	border: 1px solid #c1cddc;
+}
+
+
+#tabs {
+	height: 27px;
+	position: relative;
+}
+
+#tabs a{
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	padding: 0 0 0 15px;
+	float: left;
+	margin-left: -1px;
+}
+
+#tabs span {
+	padding: 0 15px 0 0;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	float: left;
+}
+
+#tabs a.active span {
+	font-weight: bold;
+	color: #000;
+}
+
+#loading{
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	background: skyblue;
+	color: #fff;
+	padding: 2px 8px;
+	font-size: 12px;
+	opacity: .5;
+}
+.item{
+  padding: 8px;
+  border-bottom:1px solid #D2DADA;
+  background: #fff;
+  overflow: hidden;
+  vertical-align: bottom;
+  zoom: 1;
+}
+
+.avatar{
+	float: left;
+}
+.details{
+  overflow: hidden;
+  width: 100%;
+  margin-left: -64px;	
+}
+.marginLeft{
+  margin-left: 64px;
+  word-wrap: break-word;
+  word-break: break-all;
+  zoom: 1;
+}

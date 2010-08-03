@@ -3,8 +3,74 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
 	<link rel="stylesheet" rev="stylesheet" href="css/common.css" type="text/css" />	
+	<link rel="stylesheet" rev="stylesheet" href="css/popup.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>	
+	<script type="text/javascript" src="js/util.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#controlPostArea").click(function(){
+				var oPost = $("#postArea"), oImgs = $(this).find("img");
+				var isVisible = oPost.is(':visible');
+				if(isVisible){
+					oPost.slideUp();
+					oImgs.attr("src", "images/arrow_down.gif");
+				}else{
+					oPost.slideDown();
+					oImgs.attr("src", "images/arrow_up.gif");
+					oPost.find("textarea").focus();
+				}
+			});
+			function setActiveCss(){
+				$("#tabs a.active").removeClass("active");
+				$(this).addClass("active");
+			}
+			$("#friendsTab").click(function(){
+				renjian.util.getTimeline("friendsTimeline");
+				setActiveCss.call(this);
+				return false;
+			});
+			$("#mentionsTab").click(function(){
+				renjian.util.getTimeline("mentionsTimeline");
+				setActiveCss.call(this);
+				return false;	
+			});
+			$("#publicTab").click(function(){
+				renjian.util.getTimeline("publicTimeline");
+				setActiveCss.call(this);
+				return false;
+			});	
+			//init
+			setTimeout('$("#friendsTab").click();', 100);
+		});
+	</script>
 </head>
 <body>
-Hello world
+<div id="wrap">
+	<div id="head">
+		<div id="postArea" class="hide">
+			<div id="txtCt"><textarea id="say"></textarea></div>
+			<div id="btnCt">
+				<input class="pointer" type="button" value="发送人间大炮" />
+			</div>
+		</div>
+		<div id="controlPostArea">
+			<div class="controlPostAreaPd clearfix">
+			    <img class="fl" src="images/arrow_down.gif"/>
+			            发射人间大炮
+			    <img class="fr" src="images/arrow_down.gif"/>
+		    </div>
+		</div>
+	</div>
+    <div id="tabs" class="clearfix">
+		    <a class="active friends" id="friendsTab" href="#"><span class="dongtai">动态</span></a>
+		    <a id="publicTab" href="#"><span>串门</span></a>
+		    <a id="mentionsTab" href="#"><span class="relative">@我</span></a>
+		    <div id="loading" class="hide">loading...</div>
+    </div>
+    <div class="scrollArea">
+		<div id="scrollArea"></div>
+	</div>	
+</div>
 </body>
 </html>
