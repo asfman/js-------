@@ -24,7 +24,6 @@ Persistence = {
     localStorage.removeItem('password');
     localStorage.removeItem('logged');
     localStorage.removeItem('username');
-    localStorage.removeItem('remember');
   }
 };
 Persistence.init();
