@@ -23,7 +23,6 @@ Persistence = {
   cleanupOldData: function() {
     localStorage.removeItem('password');
     localStorage.removeItem('logged');
-    localStorage.removeItem('username');
   }
 };
 Persistence.init();
